@@ -1,6 +1,6 @@
-[![Actions Status](https://github.com/kasunsjc/python-flask-docker/workflows/.github/workflows/dockerpush.yml/badge.svg)
+[![Actions Status](https://github.com/kasunsjc/python-flask-docker/workflows/.github/workflows/Build%20and%20Push%20to$20DockerHub/badge.svg)
 
-[![Actions Status](https://github.com/kasunsjc/python-flask-docker/workflows/.github/workflows/ci.yml/badge.svg)
+[![Actions Status](https://github.com/kasunsjc/python-flask-docker/workflows/.github/workflows/Flask%20Application/badge.svg)
 
 # python-flask-docker
 Basic Python Flask app in Docker which prints the hostname and IP of the container
