@@ -1,4 +1,4 @@
-name: Flake Application
+name: Flask Application
 on:
   pull_request:
     branches:

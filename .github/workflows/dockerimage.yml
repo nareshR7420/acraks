@@ -1,0 +1,9 @@
+name: Docker Image CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checout@v1
+    - name: Build the Docker Image
+      run: docker image build -t my-image:$(date +%s) .
