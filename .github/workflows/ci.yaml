@@ -3,7 +3,6 @@ on:
   pull_request:
     branches:
     - master
-    - dev-branch
 jobs:
   build:
     runs-on: ubuntu-16.04
