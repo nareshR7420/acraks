@@ -22,13 +22,13 @@ jobs:
     
     - uses: Azure/docker-login@v1
       with:
-        login-server: cloudlifeacr.azurecr.io
+        login-server: argocdacr.azurecr.io
         username: ${{ secrets.ACR_USERNAME }}
         password: ${{ secrets.ACR_PASSWORD }}
     
     - run: |
-        docker build . -t cloudlifeacr.azurecr.io/k8sflask:${{ github.sha }}
-        docker push cloudlifeacr.azurecr.io/k8sflask:${{ github.sha }}
+        docker build . -t argocdacr.azurecr.io/k8sflask:${{ github.sha }}
+        docker push argocdacr.azurecr.io/k8sflask:${{ github.sha }}
       
     # Set the target AKS cluster.
     - uses: Azure/aks-set-context@v1
@@ -39,7 +39,7 @@ jobs:
         
     - uses: Azure/k8s-create-secret@v1
       with:
-        container-registry-url: cloudlifeacr.azurecr.io
+        container-registry-url: argocdacr.azurecr.io
         container-registry-username: ${{ secrets.ACR_USERNAME }}
         container-registry-password: ${{ secrets.ACR_PASSWORD }}
         secret-name: k8s-secret
@@ -50,6 +50,6 @@ jobs:
           manifests/deployment.yaml
           manifests/service.yaml
         images: |
-          cloudlifeacr.azurecr.io/k8sflask:${{ github.sha }}
+          argocdacr.azurecr.io/k8sflask:${{ github.sha }}
         imagepullsecrets: |
           k8s-secret
