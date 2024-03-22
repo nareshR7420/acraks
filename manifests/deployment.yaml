@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: cloudlifeacr.azurecr.io/k8sflask
+        image: argocdacr.azurecr.io/k8sflask
         ports:
         - name:  http
           containerPort: 8080
