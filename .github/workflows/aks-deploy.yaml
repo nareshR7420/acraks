@@ -33,8 +33,8 @@ jobs:
     - uses: Azure/aks-set-context@v1
       with:
         creds: '${{ secrets.AZURE_CREDENTIALS }}'
-        cluster-name: aksdemocluster
-        resource-group: aksdemo
+        cluster-name: nrcluster
+        resource-group: ArgoCDRG
         
     - uses: Azure/k8s-create-secret@v1
       with:
