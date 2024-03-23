@@ -21,7 +21,7 @@ on:
         type: string
       APPNAME:
         description: 'The Name of the Application to deploy'
-        default: "k8sflask"
+        default: "flask"
         required: true
         type: string
       ENVIRONMENT:
