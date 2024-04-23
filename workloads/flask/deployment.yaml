@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: flask-deployment
-        image: nrrgacr.azurecr.io/flask:12
+        image: nrrgacr.azurecr.io/flask:13
         #imagePullPolicy: IfNotPresent
         imagePullPolicy: Always
         ports:
